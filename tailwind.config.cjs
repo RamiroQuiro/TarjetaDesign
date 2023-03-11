@@ -56,7 +56,9 @@ module.exports = {
         aparecerCostado: "aparecerCote .3s ease-in ",
         desaparecerCostado: "desaparecerCote .3s ease-in ",
       },
-
+      boxShadow:{
+        'xxxl': "5px 5px 5px rgba(0,0,0,0.1), 15px 15px 15px rgba(0,0,0,0.1), 20px 10px 20px rgba(0,0,0,0.1),50px 50px 80px rgba(0,0,0,0.25), inset 3px 3px 3px #fff  0vtzz5px 5px 5px rgba(0,0,0,0.1)5px 5px 5px rgba(0,0,0,0.1)5px 5px 5px rgba(0,0,0,0.1)5px 5px 5px rgba(0,0,0,0.1)AZ"
+      }
     },
   },
   plugins: [],
