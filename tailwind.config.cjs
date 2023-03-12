@@ -42,8 +42,8 @@ module.exports = {
           "100%": { opacity: "0" },
         },
         aparecerCote: {
-          "0%": { transform: "translateX(150%)" },
-          "100%": { transform: "translateX(0%)" },
+          "0%": { transform: "scale(0%) translateX(-20%) translateY(-20%)"},
+          "100%": { transform: "scale(100%) translateX(0%) translateY(0%)" }
         },
         desaparecerCote: {
           "0%": { transform: "translateX(0%)" },
