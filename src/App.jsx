@@ -5,6 +5,7 @@ import Login from "../src/views/Login/Login";
 
 import DashboardHome from "./views/dashboard/DashboardHome";
 import Private from "./Private";
+import Polotno from "./views/EditorGrafico/Polotno";
 export default function App() {
   return (
     <>
@@ -20,6 +21,7 @@ export default function App() {
           }
         >
           <Route path="/dashboard" element={<DashboardHome />} />
+          <Route path="/polotno" element={<Polotno />} />
         </Route>
       </Routes>
     </>
