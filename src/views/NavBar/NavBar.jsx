@@ -12,9 +12,10 @@ export default function NavBar() {
   };
 
   return (
-    <nav className=" sticky bg-zinc-800 flex w-full z-20 items-center justify-between px-28 mx-auto py-3">
-      <div>
-        <FontAwesomeIcon icon={faIdCard} />
+    <nav className=" sticky bg-zinc-800  text-zinc-100 flex w-full z-20 items-center justify-between px-28 mx-auto py-3">
+      <div className="flex items-center justify-evenly gap-5">
+        <FontAwesomeIcon icon={faIdCard} className=" text-3xl"/>
+        <span className="  font-thin">KAYPI DESIGN</span>
       </div>
       <button onClick={logOut}>LogOut</button>
     </nav>
