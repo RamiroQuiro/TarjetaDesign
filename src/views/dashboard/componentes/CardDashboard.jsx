@@ -5,7 +5,7 @@ export default function CardDashboard() {
     <li className="mt-2 flex flex-col gap-2 items-center justify-between">
         <span className="uppercase font-semibold text-zinc-50 flex-auto w-full">Click a Enlaces</span>
         <div className="flex flex-wrap gap-2 items-center justify-evenly w-full">
-      <div class="flex w  items-center p-4  rounded-lg shadow-xs bg-zinc-50">
+      <div class="flex w-full md:w-auto  items-center p-4  rounded-lg shadow-xs bg-zinc-50">
         <div class=" mr-4  rounded-full">
         <svg
           className="w-full h-full fill-cyan-600 "
@@ -23,7 +23,7 @@ export default function CardDashboard() {
           <p class="text-lg font-semibold text-gray-700 ">10</p>
         </div>
       </div>
-      <div class="flex w items-center p-4  rounded-lg shadow-xs bg-zinc-50">
+      <div class="flex w-full md:w-auto items-center p-4  rounded-lg shadow-xs bg-zinc-50">
         <div class=" mr-4 rounded-full">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -40,7 +40,7 @@ export default function CardDashboard() {
           <p class="text-lg font-semibold text-gray-700 ">10</p>
         </div>
       </div>
-      <div class="flex w items-center p-4  rounded-lg shadow-xs bg-zinc-50">
+      <div class="flex w-full md:w-auto items-center p-4  rounded-lg shadow-xs bg-zinc-50">
         <div class="mr-4 rounded-full">
         <svg
           className="w-full h-full fill-cyan-600"
@@ -57,7 +57,7 @@ export default function CardDashboard() {
           <p class="text-lg font-semibold text-gray-700 ">10</p>
         </div>
       </div>
-      <div class="flex w items-center p-4  rounded-lg shadow-xs bg-zinc-50">
+      <div class="flex w-full md:w-auto items-center p-4  rounded-lg shadow-xs bg-zinc-50">
         <div class="mr-4 rounded-full">
         <svg
           className="w-full h-full fill-cyan-600"
