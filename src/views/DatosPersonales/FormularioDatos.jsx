@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { toast, Toaster } from "react-hot-toast";
 import { supabaseClient } from "../../../backend/client";
 import InputFormularioDatos from "./InputFormularioDatos";
 
@@ -13,16 +14,14 @@ export default function FormularioDatos() {
   const handleGaurdarDatos = async (e) => {
     e.preventDefault();
 const uuid= (await supabaseClient.auth.getSession()).data.session.user.id
-console.log(uuid)
     try {
-      const result = await supabaseClient.from("UserData").insert({
+      const result = await supabaseClient.from("UserData").update({
         name: formEntry.name,
         apellido: formEntry.apellido,
         email: formEntry.email,
         razonSocial: formEntry.razonSocial,
-        uuid,
-      });
-      console.log(result);
+     }).eq('uuid',uuid)
+  
     } catch (error) {
       console.log(error);
     }
@@ -30,6 +29,7 @@ console.log(uuid)
 
   return (
     <form onSubmit={handleGaurdarDatos} className="py-10">
+      <Toaster/>
       <span>{formEntry?.name}</span>
       {/* info personal */}
       <div className="flex flex-wrap">
