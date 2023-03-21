@@ -30,7 +30,6 @@ const uuid= (await supabaseClient.auth.getSession()).data.session.user.id
   return (
     <form onSubmit={handleGaurdarDatos} className="py-10">
       <Toaster/>
-      <span>{formEntry?.name}</span>
       {/* info personal */}
       <div className="flex flex-wrap">
         <InputFormularioDatos
@@ -63,7 +62,7 @@ const uuid= (await supabaseClient.auth.getSession()).data.session.user.id
           type={"email"}
           placeholder="ramiro@quiroga.com"
         >
-          Apellido
+          Email
         </InputFormularioDatos>
       </div>
 
@@ -73,6 +72,14 @@ const uuid= (await supabaseClient.auth.getSession()).data.session.user.id
         Informacion de Contacto
       </h3>
       <div className="flex flex-wrap">
+      <InputFormularioDatos
+          onChange={handleOnChange}
+          name={"celular"}
+          type={"number"}
+          placeholder="3856771992"
+        >
+          Celular o Tel
+        </InputFormularioDatos>
         <InputFormularioDatos
           onChange={handleOnChange}
           name={"direccion"}
@@ -85,18 +92,11 @@ const uuid= (await supabaseClient.auth.getSession()).data.session.user.id
           onChange={handleOnChange}
           name={"ciudad"}
           type={"text"}
-          placeholder="La Banda"
+          placeholder="La Banda - Santiago del Estero"
         >
-          Ciudad
+          Ciudad - Provincia
         </InputFormularioDatos>
-        <InputFormularioDatos
-          onChange={handleOnChange}
-          name={"provincia"}
-          type={"text"}
-          placeholder="Santiago del Estero"
-        >
-          Provincia
-        </InputFormularioDatos>
+    
         <InputFormularioDatos
           onChange={handleOnChange}
           name={"pais"}

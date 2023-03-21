@@ -8,6 +8,11 @@ import Private from "./Private";
 import Polotno from "./views/EditorGrafico/Polotno";
 import DatosPersonales from "./views/DatosPersonales/DatosPersonales";
 import NotFound from "./views/NotFound";
+import SeccionesACompartir from "./views/Secciones/SeccionesACompartir";
+import MiEmpresa from "./views/Secciones/Outlet/MiEmpresa";
+import Multimedia from "./views/Secciones/Outlet/Multimedia";
+import ProductoServicio from "./views/Secciones/Outlet/ProductoServicio";
+import Ubicacion from "./views/Secciones/Outlet/Ubicacion";
 export default function App() {
   return (
     <>
@@ -25,8 +30,14 @@ export default function App() {
           <Route path="/dashboard" element={<DashboardHome />} />
           <Route path="/polotno" element={<Polotno />} />
           <Route path="/datosPersonales" element={<DatosPersonales />} />
+          <Route path="/seccionesCompartir" element={<SeccionesACompartir />}>
+            <Route path="/seccionesCompartir/miEmpresa" index element={<MiEmpresa />} />
+            <Route path="/seccionesCompartir/servicio" element={<ProductoServicio />} />
+            <Route path="/seccionesCompartir/ubicacion" element={<Ubicacion />} />
+            <Route path="/seccionesCompartir/multimedia" element={<Multimedia />} />
+          </Route>
         </Route>
-          <Route path="*" element={<NotFound />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </>
   );

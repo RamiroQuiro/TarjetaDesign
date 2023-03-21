@@ -14,7 +14,6 @@ export default function DatosPersonales() {
         <div className="rounded-t bg-zinc-800 text-zinc-400 mb-0 px-6 py-6">
           <div className="text-center flex justify-between">
             <h3 className="text-blueGray-700 text-xl font-bold">Mis Datos</h3>
-            <button onClick={()=>fetchData}>traer data</button>
           </div>
         </div>
         <div className="flex-auto px-4 lg:px-10 py-10 pt-0">

@@ -1,8 +1,8 @@
 import React from 'react'
 
-export default function InputFormularioDatos({children,type,name,placeholder,onChange}) {
+export default function InputFormularioDatos({children,type,name,placeholder,onChange,label}) {
   return (
-    <div className="w-full lg:w-6/12 px-4">
+    <div  className={`w-full lg:w-6/12 px-4 ${label&& "peer-checked:blur-0 blur-sm duration-200" } `}>
     <div className="relative w-full mb-3">
       <label
         className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
@@ -11,6 +11,7 @@ export default function InputFormularioDatos({children,type,name,placeholder,onC
         {children}
       </label>
       <input
+      
       name={name}
       onChange={onChange}
         type={type}
