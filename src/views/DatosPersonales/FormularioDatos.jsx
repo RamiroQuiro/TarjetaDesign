@@ -3,25 +3,33 @@ import { toast, Toaster } from "react-hot-toast";
 import { supabaseClient } from "../../../backend/client";
 import InputFormularioDatos from "./InputFormularioDatos";
 
-export default function FormularioDatos() {
-  const [formEntry, setFormEntry] = useState(null);
+export default function FormularioDatos({dateUser}) {
+  const [formEntry, setFormEntry] = useState(dateUser);
 
   const handleOnChange = (e) => {
-    console.log(e.target.name);
     setFormEntry({ ...formEntry, [e.target.name]: e.target.value });
   };
 
   const handleGaurdarDatos = async (e) => {
     e.preventDefault();
-const uuid= (await supabaseClient.auth.getSession()).data.session.user.id
+    const uuid = (await supabaseClient.auth.getSession()).data.session.user.id;
     try {
-      const result = await supabaseClient.from("UserData").update({
-        name: formEntry.name,
-        apellido: formEntry.apellido,
-        email: formEntry.email,
-        razonSocial: formEntry.razonSocial,
-     }).eq('uuid',uuid)
-  
+      const result = await supabaseClient
+        .from("UserData")
+        .update({
+          name: formEntry.name,
+          apellido: formEntry.apellido,
+          email: formEntry.email,
+          razonSocial: formEntry.razonSocial,
+          celular:formEntry.celular,
+          direccion:formEntry?.direccion,
+          ciudad:formEntry?.ciudad,
+          pais:formEntry?.pais,
+          descripcion:formEntry?.descripcion,
+
+        })
+        .eq("uuid", uuid);
+        toast.success('Datos Actualizados',)
     } catch (error) {
       console.log(error);
     }
@@ -29,10 +37,11 @@ const uuid= (await supabaseClient.auth.getSession()).data.session.user.id
 
   return (
     <form onSubmit={handleGaurdarDatos} className="py-10">
-      <Toaster/>
+      <Toaster />
       {/* info personal */}
       <div className="flex flex-wrap">
         <InputFormularioDatos
+        value={formEntry?.razonSocial}
           onChange={handleOnChange}
           name={"razonSocial"}
           type={"text"}
@@ -41,6 +50,7 @@ const uuid= (await supabaseClient.auth.getSession()).data.session.user.id
           Nombre de Negocio | Razón Social | Nombre de Fantasía
         </InputFormularioDatos>
         <InputFormularioDatos
+          value={formEntry?.name}
           onChange={handleOnChange}
           name={"name"}
           type={"text"}
@@ -49,6 +59,7 @@ const uuid= (await supabaseClient.auth.getSession()).data.session.user.id
           Nombre
         </InputFormularioDatos>
         <InputFormularioDatos
+         value={formEntry?.apellido}
           onChange={handleOnChange}
           name={"apellido"}
           type={"text"}
@@ -57,6 +68,7 @@ const uuid= (await supabaseClient.auth.getSession()).data.session.user.id
           Apellido
         </InputFormularioDatos>
         <InputFormularioDatos
+         value={formEntry?.email}
           onChange={handleOnChange}
           name={"email"}
           type={"email"}
@@ -72,7 +84,8 @@ const uuid= (await supabaseClient.auth.getSession()).data.session.user.id
         Informacion de Contacto
       </h3>
       <div className="flex flex-wrap">
-      <InputFormularioDatos
+        <InputFormularioDatos
+         value={formEntry?.celular}
           onChange={handleOnChange}
           name={"celular"}
           type={"number"}
@@ -81,6 +94,7 @@ const uuid= (await supabaseClient.auth.getSession()).data.session.user.id
           Celular o Tel
         </InputFormularioDatos>
         <InputFormularioDatos
+         value={formEntry?.direccion}
           onChange={handleOnChange}
           name={"direccion"}
           type={"text"}
@@ -89,6 +103,7 @@ const uuid= (await supabaseClient.auth.getSession()).data.session.user.id
           Dirección
         </InputFormularioDatos>
         <InputFormularioDatos
+         value={formEntry?.ciudad}
           onChange={handleOnChange}
           name={"ciudad"}
           type={"text"}
@@ -96,8 +111,9 @@ const uuid= (await supabaseClient.auth.getSession()).data.session.user.id
         >
           Ciudad - Provincia
         </InputFormularioDatos>
-    
+
         <InputFormularioDatos
+         value={formEntry?.pais}
           onChange={handleOnChange}
           name={"pais"}
           type={"text"}
@@ -117,15 +133,16 @@ const uuid= (await supabaseClient.auth.getSession()).data.session.user.id
           <div className="relative w-full mb-3">
             <label
               className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
-              htmlfor="grid-password"
+              htmlFor="grid-password"
             >
               Sobre Mi
             </label>
             <textarea
+             value={formEntry?.descripcion}
               onChange={handleOnChange}
               name="descripcion"
               type="text"
-              className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
+              className="border-0  font-semibold px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
               rows="4"
               placeholder="Has una breve descripcion para mostrar en la presentación de tu tarjeta"
             />{" "}

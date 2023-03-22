@@ -1,13 +1,18 @@
-import React from "react";
-import { estadoDatos } from "../../context/contextGlobal";
+import {useEffect} from "react";
+import { useOutletContext } from "react-router-dom";
+import {shallow  } from "zustand/shallow";
+import { supabaseClient } from "../../../backend/client";
+// import { estadoDatos } from "../../context/contextGlobal";
+import {useDataUser} from "../../context/contextGlobal";
 import SectionOutlet from "../components/SectionOutlet";
 import FormularioDatos from "./FormularioDatos";
 
 export default function DatosPersonales() {
+// const {name}=useDataUser((state)=>({name:state.name}),shallow)
 
- const {fetchData}=estadoDatos((state)=>({
-  fetchData:state.fetchData()
- }))
+const useDate=useOutletContext()
+
+
   return (
     <SectionOutlet>
       <div className="relative flex flex-col min-w-0 break-words w-full mt-10 md:mt-0 shadow-lg rounded-lg bg-zinc-100 border-0">
@@ -17,7 +22,7 @@ export default function DatosPersonales() {
           </div>
         </div>
         <div className="flex-auto px-4 lg:px-10 py-10 pt-0">
-          <FormularioDatos/>
+          <FormularioDatos dateUser={useDate}/>
         </div>
       </div>
     </SectionOutlet>
