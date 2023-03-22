@@ -18,7 +18,7 @@ export default function Layout() {
 
     
   return (
-    <main className="relative h-full">
+    <main className="relative ">
       {/* A "layout route" is a good place to put markup you want to
             share across all the pages on your site, like navigation. */}
       <NavBar />
