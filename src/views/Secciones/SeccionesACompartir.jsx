@@ -7,7 +7,7 @@ import FormularioSecciones from "./FormularioSecciones";
 export default function SeccionesACompartir() {
   return (
     <SectionOutlet>
-      <div className="flex flex-col w-full gap-10">
+      <div className="flex flex-col w-full mt-10 md:mt-0 gap-10">
         <div className="relative flex flex-col min-w-0 break-words w-full  md:mt-0 shadow-lg rounded-lg bg-zinc-100 border-0">
           <div className="rounded-t w-full bg-zinc-800 text-zinc-400 md:mb-0 md:p-6 p-3 ">
             <h2 className="text-blueGray-700 md:text-xl font-bold">
