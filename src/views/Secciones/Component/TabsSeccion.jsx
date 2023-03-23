@@ -1,16 +1,21 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 export default function TabsSeccion() {
   return (
     <div className="w-full px-5">
       <ul className="flex border-b border-gray-100">
         <li className="flex-1">
-          <Link 
+          <NavLink 
+          
           to={'/seccionesCompartir/miEmpresa'}
           
-          className="relative block p-4" href="">
-            <span className="absolute inset-x-0 -bottom-px h-px w-full bg-pink-600"></span>
+          className={({ isActive }) =>
+          isActive
+            ? " relative block p-4 border-b-2 duration-200 border-blue-500/70"
+            : "block p-4 "
+        } >
+            {/* <span className="absolute inset-x-0 -bottom-px h-px w-full bg-blue-500"></span> */}
 
             <div className="flex items-center justify-center gap-4">
               <svg
@@ -33,11 +38,15 @@ export default function TabsSeccion() {
                 Mi Empresa{" "}
               </span>
             </div>
-          </Link>
+          </NavLink>
         </li>
 
         <li className="flex-1">
-          <Link className="relative block p-4" 
+          <NavLink    className={({ isActive }) =>
+          isActive
+            ? " relative block p-4 border-b-2 duration-200 border-blue-500/70"
+            : "block p-4 "
+        } 
           to={'/seccionesCompartir/servicio'}
           >
             <div className="flex items-center justify-center gap-4">
@@ -61,11 +70,16 @@ export default function TabsSeccion() {
                 Producto o Servicio{" "}
               </span>
             </div>
-          </Link>
+          </NavLink>
         </li>
 
         <li className="flex-1">
-          <Link className="relative block p-4" to={'/seccionesCompartir/ubicacion'}>
+        <NavLink    className={({ isActive }) =>
+          isActive
+            ? " relative block duration-200 p-4 border-b-2  border-blue-500/70"
+            : "block p-4 "
+        } 
+ to={'/seccionesCompartir/ubicacion'}>
             <div className="flex items-center justify-center gap-4">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -87,11 +101,15 @@ export default function TabsSeccion() {
                 Ubicación{" "}
               </span>
             </div>
-          </Link>
+          </NavLink>
         </li>
 
         <li className="flex-1">
-          <Link className="relative block p-4" to={'/seccionesCompartir/multimedia'}>
+        <NavLink    className={({ isActive }) =>
+          isActive
+            ? " relative block p-4 border-b-2 duration-200 border-blue-500/70"
+            : "block p-4 "
+        }  to={'/seccionesCompartir/multimedia'}>
             <div className="flex items-center justify-center gap-4">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -113,7 +131,7 @@ export default function TabsSeccion() {
                 Video o Imagen{" "}
               </span>
             </div>
-          </Link>
+          </NavLink>
         </li>
       </ul>
     </div>

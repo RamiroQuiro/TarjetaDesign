@@ -20,7 +20,7 @@ export default function MiEmpresa() {
           />{" "}
         </div>
       </div>
-      <ButtonGuardar/>
+      {/* <ButtonGuardar/> */}
     </div>
   );
 }
