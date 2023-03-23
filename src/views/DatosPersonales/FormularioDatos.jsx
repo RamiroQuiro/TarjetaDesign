@@ -36,10 +36,10 @@ export default function FormularioDatos({dateUser}) {
   };
 
   return (
-    <form onSubmit={handleGaurdarDatos} className="py-10">
+    <form onSubmit={handleGaurdarDatos} className="py-10 flex flex-col item-centar justify-between">
       <Toaster />
       {/* info personal */}
-      <div className="flex flex-wrap">
+      <div className="flex md:flex-row flex-col items-center justify-evenly md:text-center">
         <InputFormularioDatos
         value={formEntry?.razonSocial}
           onChange={handleOnChange}
@@ -83,7 +83,7 @@ export default function FormularioDatos({dateUser}) {
       <h3 className="text-blueGray-400 text-sm mt-3 mb-6 font-bold uppercase">
         Informacion de Contacto
       </h3>
-      <div className="flex flex-wrap">
+      <div className="flex md:flex-row flex-col items-center justify-evenly md:text-center">
         <InputFormularioDatos
          value={formEntry?.celular}
           onChange={handleOnChange}
@@ -151,7 +151,7 @@ export default function FormularioDatos({dateUser}) {
       </div>
       <button
         type="submit"
-        className="bg-gray-700 rounded-sm px-3 py-1.5 text-gray-50 font-semibold"
+        className="bg-gray-700 rounded-sm px-3 py-1.5 mx-auto mt-10 text-gray-50 font-semibold"
       >
         Guardar
       </button>

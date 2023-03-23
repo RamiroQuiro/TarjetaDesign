@@ -21,7 +21,7 @@ const useDate=useOutletContext()
             <h3 className="text-blueGray-700 text-xl font-bold">Mis Datos</h3>
           </div>
         </div>
-        <div className="flex-auto px-4 lg:px-10 py-10 pt-0">
+        <div className="flex-auto md:px-4 lg:px-4 py-10 pt-0">
           <FormularioDatos dateUser={useDate}/>
         </div>
       </div>
