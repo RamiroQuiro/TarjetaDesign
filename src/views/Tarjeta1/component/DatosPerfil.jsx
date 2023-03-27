@@ -5,31 +5,33 @@ import ContactosComponente from "./ContactosComponente";
 
 import TituloDescripcion from "./TituloDescripcion";
 
-export default function DatosPerfil() {
+export default function DatosPerfil({userData}) {
   const contactos = [
-    {id:1,
-      type: "cel",
-      descripcion: "+54 9 3856-771992",
-      icon: celu,
-    },
-    {id:2,
+    { id: 1, type: "cel", descripcion: userData?.celular, icon: celu },
+    {
+      id: 2,
       type: "email",
-      descripcion: "rama.exe.13@gmail.com",
+      descripcion: userData?.email,
       icon: mailIcon,
     },
-    {id:3,
+    {
+      id: 3,
       type: "ubicacion",
-      descripcion: "La Banda - Santiago del Estero",
+      descripcion: userData?.direccion,
+      icon: ubicacionIcon,
+    },
+    {
+      id: 3,
+      type: "ciudad",
+      descripcion: userData?.ciudad,
       icon: ubicacionIcon,
     },
   ];
 
   return (
     <div className="w-full mx-auto  h-full mt-24">
-    <TituloDescripcion/>
-      <ContactosComponente
-      contactos={contactos}
-      />
+      <TituloDescripcion userData={userData} />
+      <ContactosComponente contactos={contactos} />
     </div>
   );
 }

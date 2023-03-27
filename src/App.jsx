@@ -17,7 +17,11 @@ export default function App() {
   return (
     <>
       <Routes>
-        <Route index element={<Home />} />
+        <Route
+        path="/:userName"
+        element={<Home/>}
+        />
+        {/* <Route index element={<Home />} /> */}
         <Route path="/login" element={<Login />} />
         <Route
           path="/"

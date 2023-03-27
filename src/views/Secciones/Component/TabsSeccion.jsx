@@ -6,15 +6,14 @@ export default function TabsSeccion() {
     <div className="w-full px-5">
       <ul className="flex border-b border-gray-100">
         <li className="flex-1">
-          <NavLink 
-          
-          to={'/seccionesCompartir/miEmpresa'}
-          
-          className={({ isActive }) =>
-          isActive
-            ? " relative block p-4 border-b-2 duration-200 border-blue-500/70"
-            : "block p-4 "
-        } >
+          <NavLink
+            to={"/seccionesCompartir/miEmpresa"}
+            className={({ isActive }) =>
+              isActive
+                ? " relative block p-4 border-b-2 duration-200 border-blue-500/70"
+                : "block p-4 "
+            }
+          >
             {/* <span className="absolute inset-x-0 -bottom-px h-px w-full bg-blue-500"></span> */}
 
             <div className="flex items-center justify-center gap-4">
@@ -42,12 +41,13 @@ export default function TabsSeccion() {
         </li>
 
         <li className="flex-1">
-          <NavLink    className={({ isActive }) =>
-          isActive
-            ? " relative block p-4 border-b-2 duration-200 border-blue-500/70"
-            : "block p-4 "
-        } 
-          to={'/seccionesCompartir/servicio'}
+          <NavLink
+            className={({ isActive }) =>
+              isActive
+                ? " relative block p-4 border-b-2 duration-200 border-blue-500/70"
+                : "block p-4 "
+            }
+            to={"/seccionesCompartir/servicio"}
           >
             <div className="flex items-center justify-center gap-4">
               <svg
@@ -74,12 +74,14 @@ export default function TabsSeccion() {
         </li>
 
         <li className="flex-1">
-        <NavLink    className={({ isActive }) =>
-          isActive
-            ? " relative block duration-200 p-4 border-b-2  border-blue-500/70"
-            : "block p-4 "
-        } 
- to={'/seccionesCompartir/ubicacion'}>
+          <NavLink
+            className={({ isActive }) =>
+              isActive
+                ? " relative block duration-200 p-4 border-b-2  border-blue-500/70"
+                : "block p-4 "
+            }
+            to={"/seccionesCompartir/ubicacion"}
+          >
             <div className="flex items-center justify-center gap-4">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -105,11 +107,14 @@ export default function TabsSeccion() {
         </li>
 
         <li className="flex-1">
-        <NavLink    className={({ isActive }) =>
-          isActive
-            ? " relative block p-4 border-b-2 duration-200 border-blue-500/70"
-            : "block p-4 "
-        }  to={'/seccionesCompartir/multimedia'}>
+          <NavLink
+            className={({ isActive }) =>
+              isActive
+                ? " relative block p-4 border-b-2 duration-200 border-blue-500/70"
+                : "block p-4 "
+            }
+            to={"/seccionesCompartir/multimedia"}
+          >
             <div className="flex items-center justify-center gap-4">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
