@@ -17,10 +17,10 @@ export default function FormularioDatos({dateUser}) {
       const result = await supabaseClient
         .from("UserData")
         .update({
-          name: formEntry.name,
+          name: formEntry.name.toLowerCase(),
           apellido: formEntry.apellido,
           email: formEntry.email,
-          razonSocial: formEntry.razonSocial,
+          razonSocial: formEntry.razonSocial.toLowerCase(),
           celular:formEntry.celular,
           direccion:formEntry?.direccion,
           ciudad:formEntry?.ciudad,

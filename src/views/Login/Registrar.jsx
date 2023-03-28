@@ -6,11 +6,17 @@ import {
   faQuestion,
   faUserPlus,
   faUserLock,
+  faUserAlt,
+  faUserCircle,
+  faUserGear,
+  faUserShield,
+  faUsersCog,
+  faUsers,
 } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
 import { supabaseClient } from "../../../backend/client";
 import { useNavigate } from "react-router-dom";
-import { toast } from "react-hot-toast";
+import { toast, Toaster } from "react-hot-toast";
 import Input from "./componentes/Input";
 
 export default function Registrar() {
@@ -34,11 +40,11 @@ export default function Registrar() {
         name:formulario.name,
         email:formulario.email,
         razonSocial:formulario.razonSocial,
+      }).then(()=>{
+          toast.success("Usuario Registrado con Exito");
+          navigate("/dashboard");
       })
 
-      resultado.data&&toast.success("Usuario Registrado con Exito");
-
-      navigate("/dashboard");
     } catch (error) {
       console.log(error);
     }
@@ -46,6 +52,7 @@ export default function Registrar() {
 
   return (
     <div className="w-screen h-screen bg-rose-900 flex items-center justify-center overflow-hidden absolute">
+        <Toaster/>
       {/* border y conbtenedor */}
       <section
         className="bg-white h-[600px] w-[400px]  relative flex items-center justify-center before:content-[' '] before:absolute before:top-0 before:left-0 before:w-6 before:h-full before:bg-gradient-to-t before:to-gray-50 before:from-gray-500 before:backdrop-blur-sm before:z-10
@@ -68,7 +75,7 @@ export default function Registrar() {
           <form className="px-10 py-5  w-10/12 flex flex-col justify-between items-center h-full  ">
             <div className="bg-gray-700 rounded-full w-20  left-0 bottom-3 h-20  flex items-center justify-center mx-auto">
               <FontAwesomeIcon
-                icon={faKey}
+                icon={faUserPlus}
                 className="text-stone-50 w-10 h-10 flex items-center justify-center mx-auto"
               />
             </div>
@@ -76,9 +83,14 @@ export default function Registrar() {
             <Input icon={faUser} name='razonSocial' type="text" handleChange={handleChange}>
               Razon Social | Nombre de Usuario
             </Input>
+            <div className="flex gap-1">
+
             <Input icon={faUser} name='name' type="text" handleChange={handleChange}>
               Nombre
+            </Input><Input icon={faUser} name='apellido' type="text" handleChange={handleChange}>
+              Apellido
             </Input>
+            </div>
             <Input icon={faUser} name='email' type="mail" handleChange={handleChange}>
               usermail@mail.com
             </Input>

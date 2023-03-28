@@ -13,12 +13,12 @@ export default function SectionTarjetaSola({label}) {
       const usuario = await supabaseClient
         .from("UserData")
         .select()
-        .eq("razonSocial", !label?params.userName:label);
+        .eq("razonSocial", !label?(params.userName.toLowerCase()):label);
         // console.log(usuario?.data[0])
         setDatosUser(usuario?.data[0]);
+        console.log(usuario)
       };
       traerData();
-
     return () => {};
   }, []);
 
