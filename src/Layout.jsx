@@ -5,7 +5,7 @@ import Footer from "./views/components/Footer";
 import NavBar from "./views/NavBar/NavBar";
 import Sidebar from "./views/sidebar/Sidebar";
 export default function Layout() {
-  const [userDate, setUserDate] = useState(null)
+  const [userData, setUserDate] = useState(null)
     useEffect(() => {
     const fechear=async()=>{
       const uuid= (await supabaseClient.auth.getSession()).data.session.user.id
@@ -27,7 +27,7 @@ export default function Layout() {
       {/* An <Outlet> renders whatever child route is currently active,
             so you can think about this <Outlet> as a placeholder for
             the child routes we defined above. */}
-      <Outlet context={userDate} />
+      <Outlet context={userData} />
       <Footer />
     </main>
   );

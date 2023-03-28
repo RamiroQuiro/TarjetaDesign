@@ -55,21 +55,25 @@ const handleSubmit= async(e)=>{
                 onChange={handleChange}
                 type="mail" name="email" id="email" required className="peer w-full py-3 pl-8 bg-transparent shadow-none border-0 border-b-2 text-gray-700 border-gray-500 outline-none focus:outline-none relative z-10" />
                 <FontAwesomeIcon icon={faUser} className="text-gray-700 absolute left-0 bottom-3 h-2/5" /> 
-                <label htmlFor="mail" className=" peer-focus:bg-gray-700 peer-focus:text-gray-50  peer-focus:p-1 peer-focus:rounded-sm peer-focus:-translate-y-8 peer-valid:bg-gray-700 peer-valid:text-gray-50  peer-valid:p-1 peer-valid:rounded-sm peer-valid:text-xs peer-focus:text-xs peer-valid:-translate-y-8 duration-500 text-gray-700 absolute left-0 bottom-3 pl-8 ">usermail@mail.com</label>
+                <label htmlFor="email" className=" peer-focus:bg-gray-700 peer-focus:text-gray-50  peer-focus:p-1 peer-focus:rounded-sm peer-focus:-translate-y-8 peer-valid:bg-gray-700 peer-valid:text-gray-50  peer-valid:p-1 peer-valid:rounded-sm peer-valid:text-xs peer-focus:text-xs peer-valid:-translate-y-8 duration-500 text-gray-700 absolute left-0 bottom-3 pl-8 ">usermail@mail.com</label>
               </div>
               <div className="flex flex-col  items-start justify-between w-full relative  my-2">
               <input
                 onChange={handleChange}
               type="password" name="password" id="password"  required className="peer w-full py-3 pl-8 bg-transparent shadow-none border-0 border-b-2 text-gray-700 border-gray-500 outline-none focus:outline-none relative z-10" />
                 <FontAwesomeIcon icon={faLock} className="text-gray-700 absolute left-0 bottom-3 h-2/5" />
-                <label htmlFor="userName" className="peer-focus:bg-gray-700 peer-focus:text-gray-50  peer-focus:p-1 peer-focus:rounded-sm  peer-focus:-translate-y-8 peer-valid:bg-gray-700  peer-valid:text-gray-50  peer-valid:p-1 peer-valid:rounded-sm peer-valid:text-xs peer-focus:text-xs peer-valid:-translate-y-8 duration-500 text-gray-700 absolute left-0 bottom-3 pl-8 " >Contraseña</label>
+                <label htmlFor="password" className="peer-focus:bg-gray-700 peer-focus:text-gray-50  peer-focus:p-1 peer-focus:rounded-sm  peer-focus:-translate-y-8 peer-valid:bg-gray-700  peer-valid:text-gray-50  peer-valid:p-1 peer-valid:rounded-sm peer-valid:text-xs peer-focus:text-xs peer-valid:-translate-y-8 duration-500 text-gray-700 absolute left-0 bottom-3 pl-8 " >Contraseña</label>
     
               </div>
               <div className="flex w-full  justify-center items-center gap-4">
-                <div className="w-1/2 flex justify-between items-center gap-1 cursor-pointer">
-                  <p className="font-semibold text-sm w-full">Resetear clave</p> <FontAwesomeIcon icon={faQuestion} className="text-gray-700 h-3"/>
+                <div className="w-1/2 flex justify-center items-center gap-1 cursor-pointer">
+                  <p className="font-semibold text-sm ">Resetear clave</p> <FontAwesomeIcon icon={faQuestion} className="text-gray-700 h-3"/>
                 </div>
-                <div className="w-1/2 flex  justify-between items-center gap-1 cursor-pointer">
+                <div 
+                onClick={()=>{
+                  navigate('/registrar')
+                }}
+                className="w-1/2 flex  justify-center items-center gap-1 cursor-pointer">
                   <p className="font-semibold text-sm">Registrarse</p> <FontAwesomeIcon icon={faUserPlus} className="text-gray-700 h-3"/>
                 </div>
               </div>
