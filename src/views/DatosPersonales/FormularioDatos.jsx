@@ -151,7 +151,7 @@ export default function FormularioDatos({dateUser}) {
       </div>
       <button
         type="submit"
-        className="bg-gray-700 rounded-sm px-3 py-1.5 mx-auto mt-10 text-gray-50 font-semibold"
+        className="bg-sky-900 rounded px-3 py-1.5 mx-auto mt-10 text-sky-50 hover:scale-105 duration-200 font-semibold"
       >
         Guardar
       </button>
