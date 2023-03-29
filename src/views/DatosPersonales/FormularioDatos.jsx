@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { toast, Toaster } from "react-hot-toast";
 import { supabaseClient } from "../../../backend/client";
+import ButtonGuardar from "../components/ButtonGuardar";
 import InputFormularioDatos from "./InputFormularioDatos";
 
 export default function FormularioDatos({dateUser}) {
@@ -149,12 +150,7 @@ export default function FormularioDatos({dateUser}) {
           </div>
         </div>
       </div>
-      <button
-        type="submit"
-        className="bg-sky-900 rounded px-3 py-1.5 mx-auto mt-10 text-sky-50 hover:scale-105 duration-200 font-semibold"
-      >
-        Guardar
-      </button>
+     <ButtonGuardar/>
     </form>
   );
 }

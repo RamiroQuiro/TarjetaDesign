@@ -10,7 +10,7 @@ export default function FormularioSecciones() {
       <div>
         <Outlet />
       </div>
-      <ButtonGuardar>Guardar</ButtonGuardar>
+      <ButtonGuardar />
     </form>
   );
 }

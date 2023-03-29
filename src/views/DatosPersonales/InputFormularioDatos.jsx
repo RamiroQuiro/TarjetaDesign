@@ -27,7 +27,7 @@ export default function InputFormularioDatos({
           name={name}
           onChange={onChange}
           type={type}
-          className="border-0 px-3 py-3 font-semibold placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
+          className={`${name=='email'&& "lowercase"} border-0 px-3 py-3 font-semibold capitalize placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150`}
           placeholder={placeholder}
         />
       </div>

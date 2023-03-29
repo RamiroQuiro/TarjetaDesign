@@ -17,20 +17,24 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState } from "react";
 import ButtonSidebar from "./componentes/ButtonSidebar";
 export default function Sidebar() {
-const [toggle, setToggle] = useState(false)
+  const [toggle, setToggle] = useState(false);
 
   return (
-    <div className="md:w-24 w-full absolute top-0 left-0 md:h-full py-2  md:bg-sky-900 bg-sky-900/95  pt-20 group z-20">
+    <div className="md:w-24 w-full absolute top-0 left-0 md:h-full py-2  md:bg-sky-900 bg-sky-900/95 backdrop-blur-sm  mt-14  md:pt-20 group z-20">
       <div
-      className={`w-full md:hidden cursor-pointer py-2 flex items-center justify-end pr-10 text-sky-50 text-2xl  duration-300`}
-      onClick={()=>setToggle(!toggle)}
+        className={`w-full md:hidden cursor-pointer py-2 flex items-center justify-end pr-10 text-sky-50 text-2xl  duration-300`}
+        onClick={() => setToggle(!toggle)}
       >
         <FontAwesomeIcon
-        className="duration-200 animate-aparecer"
-icon={!toggle? faBars:faBarsStaggered}
+          className="duration-200 animate-aparecer"
+          icon={!toggle ? faBars : faBarsStaggered}
         />
-        </div>      
-      <div className={`${!toggle&&'hidden md:flex'} animate-aparecer px-2 md:px-0 md:w-20 mx-auto flex flex-col duration-300  peer-checked:hidden items-center justify-between gap-4`}>
+      </div>
+      <div
+        className={`${
+          !toggle && "hidden md:flex"
+          } animate-[sliceUp_.5s] px-2 md:px-0 md:w-20 mx-auto flex flex-col duration-300 items-center justify-between gap-4`}
+      >
         <ButtonSidebar link={"dashboard"} icon={faDashboard}>
           Dashboard
         </ButtonSidebar>

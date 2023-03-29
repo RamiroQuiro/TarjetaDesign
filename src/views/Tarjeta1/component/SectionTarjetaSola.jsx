@@ -22,12 +22,12 @@ export default function SectionTarjetaSola({label}) {
   }, []);
 
   return (
-    <section className="bg-white border rounded-lg md:max-w-[40vw]  w-full md:h-[95%] h-full z-20 flex flex-col items-center justify-between ">
+    <section className="bg-white border capitalize rounded-lg md:max-w-[40vw]  w-full md:h-[95%] h-full z-20 flex flex-col items-center justify-between ">
       <ImagenPerfil />
       <DatosPerfil userData={datosUser} />
       <LinksSquare />
-      <div className="text-sm font-extralight pb-5">
-        <span>{datosUser?.descripcion}</span>
+      <div className="text-xs capitalize font-semibold pb-5">
+        <span>RamiroCode | Web Developer </span>
       </div>
     </section>
   );
