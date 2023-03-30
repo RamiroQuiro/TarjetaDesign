@@ -68,7 +68,7 @@ const infoCard = [
 export default function CardsDasboard({ children }) {
   return (
     <div className="pt-1 pb-2 px-2 overflow-y-auto mx-auto">
-      <span className="uppercase font-semibold text-zinc-50 flex-auto w-full mb-2">
+      <span className="uppercase bg-sky-200 px-4 rounded-lg py-2 font-bold text-sky-900 flex-auto w-full mb-2">
         Click a Enlaces
       </span>
       <div className="flex flex-wrap gap-2 items-center mx-auto justify-envely my-4 w-full">

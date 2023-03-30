@@ -1,4 +1,5 @@
 import React from "react";
+import BackgroundDorm from "../components/BackgroundDorm";
 import SectionOutlet from "../components/SectionOutlet";
 import InputFormularioDatos from "../DatosPersonales/InputFormularioDatos";
 import FormularioPrimerosLink from "./FormularioPrimerosLink";
@@ -8,7 +9,7 @@ export default function SeccionesACompartir() {
   return (
     <SectionOutlet>
       <div className="flex flex-col w-full mt-10 md:mt-0 gap-10">
-        <div className="relative flex flex-col min-w-0 break-words w-full  md:mt-0 shadow-lg rounded-lg bg-neutral-100 border-0">
+       <BackgroundDorm>
           <div className="rounded-t w-full bg-gradient-to-tr from-sky-900 via-sky-800 to-sky-700 text-sky-50 md:mb-0 md:p-6 p-3 ">
             <h2 className="text-blueGray-700 md:text-xl font-bold">
               Link a compartir en primer plano
@@ -17,8 +18,8 @@ export default function SeccionesACompartir() {
           <div className="flex-auto md:px-4 lg:px-4  pt-0">
             <FormularioPrimerosLink />
           </div>
-        </div>
-        <div className="relative flex flex-col min-w-0 break-words w-full   md:mt-0 shadow-lg rounded-lg bg-neutral-100 border-0">
+          </BackgroundDorm>
+          <BackgroundDorm>
           <div className="rounded-t w-full bg-gradient-to-tr from-sky-900 via-sky-800 to-sky-700 text-sky-50 md:mb-0 md:p-6 p-3 ">
             <h2 className="text-blueGray-700 text-xl font-bold">
               Secciones a integrar en tu Tarjeta
@@ -27,7 +28,7 @@ export default function SeccionesACompartir() {
           <div className="flex-auto md:px-4 lg:px-4  pt-0">
             <FormularioSecciones />
           </div>
-        </div>
+        </BackgroundDorm>
       </div>
     </SectionOutlet>
   );

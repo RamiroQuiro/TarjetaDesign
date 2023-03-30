@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { supabaseClient } from "../../../../backend/client";
+import NavBarTarjeta from "../../components/NavBarTarjeta";
 import DatosPerfil from "./DatosPerfil";
 import ImagenPerfil from "./ImagenPerfil";
 import LinksSquare from "./LinksSquare";
@@ -22,13 +23,15 @@ export default function SectionTarjetaSola({label}) {
   }, []);
 
   return (
-    <section className="bg-white border capitalize rounded-lg md:max-w-[40vw]  w-full md:h-[95%] h-full z-20 flex flex-col items-center justify-between ">
+    <section className="bg-white border capitalize rounded-lg md:max-w-[40vw]  w-full md:h-[95%] relative h-full z-20 flex flex-col items-center justify-between ">
+      <div className="absolute top-0 lef-0 text-xs text-gray-600 capitalize font-semibold py-2 ">
+        <span>RamiroCode | Web Developer </span>
+      </div>
       <ImagenPerfil />
       <DatosPerfil userData={datosUser} />
       <LinksSquare />
-      <div className="text-xs capitalize font-semibold pb-5">
-        <span>RamiroCode | Web Developer </span>
-      </div>
+      <NavBarTarjeta/>
+
     </section>
   );
 }
