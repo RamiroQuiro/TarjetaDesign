@@ -13,35 +13,36 @@ export default function NavBarTarjeta() {
   const linkDeMenu = [
     {
       id: 1,
-      link: "#",
+      link: ":userName",
       icon: faUserTag,
       className: "",
     },
     {
       id: 2,
-      link: "#",
+      link: "/:userName/servicios",
       icon: faBriefcase,
       className: "",
     },
     {
       id: 3,
-      link: "#",
+      link: "/:userName/ubicacion",
       icon: faMapLocationDot,
       className: "",
     },
     {
       id: 4,
-      link: "#",
+      link: "/:userName/multimedia",
       icon: faPhotoVideo,
       className: "",
     },
   ];
 
   return (
-    <div className="w-full bg-orange-400 py-2">
-      <ul className="w-full flex items-center text-xl justify-evenly text-gray-600">
+    <div className="w-full bg-neutral-100 py-2">
+      <ul className="w-full flex items-center text-xl justify-evenly text-neutral-600">
         {linkDeMenu.map((link) => (
           <li 
+          className="hover:text-sky-900 hover:-translate-y-1 duration-200"
           key={link.id}
           >
             <Link to={link.link}>

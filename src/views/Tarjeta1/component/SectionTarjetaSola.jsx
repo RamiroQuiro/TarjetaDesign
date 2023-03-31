@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Outlet, useParams } from "react-router-dom";
 import { supabaseClient } from "../../../../backend/client";
 import NavBarTarjeta from "../../components/NavBarTarjeta";
 import DatosPerfil from "./DatosPerfil";
@@ -27,9 +27,7 @@ export default function SectionTarjetaSola({label}) {
       <div className="absolute top-0 lef-0 text-xs text-gray-600 capitalize font-semibold py-2 ">
         <span>RamiroCode | Web Developer </span>
       </div>
-      <ImagenPerfil />
-      <DatosPerfil userData={datosUser} />
-      <LinksSquare />
+     <Outlet context={datosUser}/>
       <NavBarTarjeta/>
 
     </section>
