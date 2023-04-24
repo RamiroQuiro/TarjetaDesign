@@ -6,6 +6,14 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors:{
+         // for 'primary' and'success'  - use the colorblind-friendly version (blue-grey, cyan-grey, green-grey, orange-grey, purple-grey, red-grey, yellow-grey and violet-grey) and use the hex value.  Also, check out the Color Wheel demo.  Also, check out the Palette demo for the 5 color version.  Also, check out the Paletton demo for the inverse of colors.  Also, check out the Color Wheel demo for the 5 color version.  Also, check out the Paletton demo for the inverse of colors
+         'primary':{
+          100:'#102533',
+          200:'#782D13',
+          300:'#164E63'
+         }
+      },
       keyframes: {
         abrirCat: {
           "0%": { transform: "rotate(0.0deg)" },

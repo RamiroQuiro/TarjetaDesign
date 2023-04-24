@@ -21,7 +21,6 @@ export default function SectionTarjetaSola({label}) {
       traerData();
     return () => {};
   }, []);
-
   return (
     <section className="bg-white border capitalize rounded-lg md:max-w-[40vw]  w-full md:h-[95%] relative h-full z-20 flex flex-col items-center justify-between ">
       <div className="absolute top-0 lef-0 text-xs text-gray-600 capitalize font-semibold py-2 ">
