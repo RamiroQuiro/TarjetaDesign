@@ -2,18 +2,35 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React from 'react'
 import { Link, NavLink } from 'react-router-dom'
 
-export default function ButtonSidebar({icon,classNameIcon,children,link}) {
+ function MoleculaLink({isActive,icon,className,children}) {
+  return (
+    <>
+            <FontAwesomeIcon icon={icon} className= {`${className} text-2xl w-3/12   md:w-10 mr-5`}/>
+            <p className={ isActive?'flex font-semibold md:text-xs ':'hidden md:text-xs md:opacity-0  invisible text-gray-700 font- text-center'}>{children}</p>
+            </> 
+  )
+}
 
+
+export default function ButtonSidebar({setToggle,icon,classNameIcon,children,link}) {
     
   return (
     <NavLink
+    onClick={()=>setToggle(false)}
     to={link || "#"}
-    className={ ({isActive})=>isActive?'bg-amber-100  flex group w-36 md:ml-2  cursor-pointer group md:items-center md:justify-between  p-2 gap-x-8 md:gap-1 md:p-2 mx-auto  duration-300 text-zinc-700 rounded':` flex group w-36 md:hover:ml-2 ml-1 cursor-pointer group md:items-center text-zinc-100 md:justify-between  p-2 gap-x-8 md:gap-1 md:p-2 mx-auto hover:bg-amber-100 duration-300 hover:text-zinc-700 rounded`}>
+    className={ ({isActive})=>isActive?`bg-primary-400 relative border-none md:ml-7 shadow-lg rounded p-2 z-20 md:w-36 w-10/12  text-neutral-700 flex h-10 items-center justify-center before:content-[' '] before:absolute before:w-2/3 before:right-0 before:h-full before:bg-primary-400/80 before:-z-20 before:translate-y-2 before:block before:rounded before:bottom-0 before:-rotate-12`
+    :
+    ` flex relative group md:hover:w-36 w-11/12 border-none md:hover:ml-7 ml-5 md:w-10 overflow-hidden cursor-pointer group md:items-center text-neutral-100 md:justify-between  p-2 gap-x-8 md:gap-1 md:p-2 mx-auto hover:bg-primary-400 duration-300 hover:text-zinc-700 rounded h-10 `}>
       {(isActive)=>(
-        <>
-            <FontAwesomeIcon icon={icon} className= {`${classNameIcon} text-2xl w-1/12   md:w-1/3`}/>
-            <button className={ isActive?'block':'hidden '+`md:text-xs hidden group-hover:block font-semibold text-center`}>{children}</button>
-            </>  )}
+      <MoleculaLink
+      icon={icon}
+      isActive={isActive}
+      className={classNameIcon}
+      children={children}
+      />
+            )
+            
+            }
         </NavLink>
   )
 }

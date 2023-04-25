@@ -9,9 +9,11 @@ module.exports = {
       colors:{
          // for 'primary' and'success'  - use the colorblind-friendly version (blue-grey, cyan-grey, green-grey, orange-grey, purple-grey, red-grey, yellow-grey and violet-grey) and use the hex value.  Also, check out the Color Wheel demo.  Also, check out the Palette demo for the 5 color version.  Also, check out the Paletton demo for the inverse of colors.  Also, check out the Color Wheel demo for the 5 color version.  Also, check out the Paletton demo for the inverse of colors
          'primary':{
-          100:'#102533',
-          200:'#782D13',
-          300:'#164E63'
+          100:'#428BB3',
+          200:'#419BCC',
+          300:'#FF6B75',
+          400:'#FFFC85',
+          500:'#B33941'
          }
       },
       keyframes: {

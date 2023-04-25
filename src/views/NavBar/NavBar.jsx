@@ -12,7 +12,7 @@ export default function NavBar({userData}) {
   };
 
   return (
-    <nav className=" sticky bg-gradient-to-l from-orange-900 via-[#102533] to-cyan-900  text-sky-50 flex w-screen z-30 items-center md:justify-between justify-around md:px-16 mx-auto py-4">
+    <nav className=" sticky bg-gradient-to-l from-primary-200 via-primary-200 to-primary-100  text-sky-50 flex w-screen z-30 items-center md:justify-between justify-around md:px-16 mx-auto py-4">
       <div 
       onClick={()=>navigate(`/${userData?.razonSocial}`)}
       className="flex items-center justify-evenly gap-4 cursor-pointer">
