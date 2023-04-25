@@ -2,11 +2,11 @@ import React from "react";
 
 export default function CardDashboard({ descripcion, info, svg }) {
   return (
-    <div class="flex flex- w-[48%] mx-auto  items-center p-4  rounded-lg shadow-xs bg-zinc-50">
-      <div class=" mr-4 rounded-full">{svg}</div>
-      <div>
-        <p class="mb-2 text-sm font-medium text-gray-600 ">{descripcion}</p>
-        <p class="text-lg font-semibold text-gray-700 ">{info}</p>
+    <div className="flex shadow-lg w-36 mx-auto  items-center p-4  text-gray-100 rounded-lg shadow-xs bg-gradient-to-tl  from-primary-100 via-primary-200 to-primary-200/50">
+      <div className=" mr-4 rounded-full bg-gray-50 p-2">{svg}</div>
+      <div className="flex-col flex items-center justify-center flex-grow">
+        <p className="mb-2 text-sm font-medium ">{descripcion}</p>
+        <p className="text-lg md:text-2xl md:font-bold font-semibold ">{info}</p>
       </div>
     </div>
   );

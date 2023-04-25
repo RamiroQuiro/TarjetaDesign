@@ -5,7 +5,7 @@ const infoCard = [
   {
     svg: (
       <svg
-        className="w-full h-full fill-cyan-600 "
+        className="w-full h-full fill-primary-200 "
         width="36"
         height="36px"
         viewBox="0 0 24 24"
@@ -23,7 +23,7 @@ const infoCard = [
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
-        className="w-full h-full fill-cyan-600"
+        className="w-full h-full fill-primary-200"
         width="36"
         height="36"
       >
@@ -36,7 +36,7 @@ const infoCard = [
   {
     svg: (
       <svg
-        className="w-full h-full fill-cyan-600"
+        className="w-full h-full fill-primary-200"
         viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"
         width="24"
@@ -51,7 +51,7 @@ const infoCard = [
   {
     svg: (
       <svg
-        className="w-full h-full fill-cyan-600"
+        className="w-full h-full fill-primary-200"
         viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"
         width="24"
@@ -67,11 +67,11 @@ const infoCard = [
 
 export default function CardsDasboard({ children }) {
   return (
-    <div className="pt-1 pb-2 px-2 overflow-y-auto mx-auto">
-      <span className="uppercase bg-sky-200 px-4 rounded-lg py-2 font-bold text-sky-900 flex-auto w-full mb-2">
+    <div className="pt-1 pb-2 px-2 overflow-y-auto mx-auto ">
+      <span className="uppercase bg-primary-400 px-4 rounded-b-lg py-2 font-bold text-neutral-700 flex-auto w-full mb-2">
         Click a Enlaces
       </span>
-      <div className="flex flex-wrap gap-2 items-center mx-auto justify-envely my-4 w-full">
+      <div className="flex gap-2 items-center mx-auto justify-envely my-4 w-full">
         {infoCard?.map((card, i) => (
           <CardDashboard
             descripcion={card.descripcion}

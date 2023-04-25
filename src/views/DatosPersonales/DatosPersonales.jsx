@@ -17,7 +17,7 @@ const useDate=useOutletContext()
   return (
     <SectionOutlet>
      <BackgroundDorm>
-        <div className="rounded-t bg-gradient-to-tr from-sky-900 via-sky-800 to-sky-700 text-sky-50 mb-0 px-6 py-6">
+        <div className="rounded-t bg-gradient-to-tl from-primary-200 via-primary-100 to-primary-100 text-sky-50 mb-0 px-6 py-6">
           <div className="text-center flex justify-between">
             <h3 className="text-blueGray-700 text-xl font-bold">Mis Datos</h3>
           </div>
