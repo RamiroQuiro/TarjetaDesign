@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { supabaseClient } from "../../../backend/client";
-import ButtonGuardar from "../components/buttonGuardar";
 import InputFormularioDatos from "../DatosPersonales/InputFormularioDatos";
 
 export default function FormularioPrimerosLink({ dataUser }) {
@@ -108,7 +107,7 @@ export default function FormularioPrimerosLink({ dataUser }) {
           ></InputFormularioDatos>
         </div>
       </div>
-      <ButtonGuardar />
+      {/* <ButtonGuardar /> */}
     </form>
   );
 }
