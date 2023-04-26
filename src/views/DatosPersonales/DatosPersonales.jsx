@@ -7,6 +7,7 @@ import {useDataUser} from "../../context/contextGlobal";
 import BackgroundDorm from "../components/BackgroundDorm";
 import SectionOutlet from "../components/SectionOutlet";
 import FormularioDatos from "./FormularioDatos";
+import CabeceraContenedor from "../components/CabeceraContenedor";
 
 export default function DatosPersonales() {
 // const {name}=useDataUser((state)=>({name:state.name}),shallow)
@@ -17,11 +18,11 @@ const useDate=useOutletContext()
   return (
     <SectionOutlet>
      <BackgroundDorm>
-        <div className="rounded-t bg-gradient-to-tl from-primary-200 via-primary-100 to-primary-100 text-sky-50 mb-0 px-6 py-6">
+        <CabeceraContenedor >
           <div className="text-center flex justify-between">
             <h3 className="text-blueGray-700 text-xl font-bold">Mis Datos</h3>
           </div>
-        </div>
+        </CabeceraContenedor>
         <div className="flex-auto md:px-4 lg:px-4 py-10 pt-0">
           <FormularioDatos dateUser={useDate}/>
         </div>
