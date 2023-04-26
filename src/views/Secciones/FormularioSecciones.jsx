@@ -1,6 +1,5 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
-import ButtonGuardar from "../components/buttonGuardar";
 import TabsSeccion from "./Component/TabsSeccion";
 
 export default function FormularioSecciones() {
@@ -10,7 +9,6 @@ export default function FormularioSecciones() {
       <div>
         <Outlet />
       </div>
-      <ButtonGuardar />
     </form>
   );
 }
