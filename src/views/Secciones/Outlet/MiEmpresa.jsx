@@ -1,5 +1,4 @@
 import React from "react";
-import ButtonGuardar from "../../components/buttonGuardar";
 import InputFormularioDatos from "../../DatosPersonales/InputFormularioDatos";
 
 export default function MiEmpresa() {
