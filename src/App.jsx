@@ -1,4 +1,4 @@
-import { Route, Routes, useNavigate } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import Layout from "./Layout";
 import Home from "../src/views/Tarjeta1/Home";
 import Login from "../src/views/Login/Login";
