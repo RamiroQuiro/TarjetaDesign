@@ -22,9 +22,9 @@ export default function SectionTarjetaSola({label}) {
     return () => {};
   }, []);
   return (
-    <section className="bg-white  border capitalize rounded-lg lg:w-[30vw]  md:w-[50vw] w-full md:h-[90%] shadow-xl relative h-full z-20 flex flex-col items-center justify-between ">
+    <section className="bg-white border capitalize rounded-lg lg:w-[30vw]  md:w-[50vw] w-full md:h-[90%] shadow-shadowCaja1 relative h-full z-20 flex flex-col items-center justify-between ">
       
-      <div className="absolute top-0 lef-0 text-xs text-gray-600 capitalize font-semibold py-2 ">
+      <div className="absolute top-0 lef-0 text-xs text-gray-600 capitalize z-50 font-semibold py-2 ">
         <span> RamiroCode | Web Developer </span>
       </div>
      <Outlet context={datosUser}/>
