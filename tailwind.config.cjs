@@ -5,6 +5,12 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    clipPath: {
+      mypolygon: "polygon(0 0, 99% 0, 100% 100%, 50% 87%, 54% 100%, 0 88%)",
+      mypolygon2: "polygon(0 0, 99% 0, 100% 100%, 25% 81%, 30% 94%, 0 81%)",
+      myCirclue: "polygon(0% 63%, 8% 63%,11% 68%, 18% 70%, 23% 69%, 29% 67%, 33% 63%, 37% 59%, 41% 56%, 46% 55%, 49% 53%, 54% 53%, 60% 54%, 65% 56%, 70% 58%, 78% 60%, 82% 62%, 86% 64%, 91% 66%, 95% 67%, 99% 69%, 100% 1%, 1% 0%);",
+
+  },
     extend: {
       colors:{
          // for 'primary' and'success'  - use the colorblind-friendly version (blue-grey, cyan-grey, green-grey, orange-grey, purple-grey, red-grey, yellow-grey and violet-grey) and use the hex value.  Also, check out the Color Wheel demo.  Also, check out the Palette demo for the 5 color version.  Also, check out the Paletton demo for the inverse of colors.  Also, check out the Color Wheel demo for the 5 color version.  Also, check out the Paletton demo for the inverse of colors
@@ -21,6 +27,8 @@ module.exports = {
         borderRounded:'23% 77% 0% 100% / 0% 67% 33% 100%'
       },
       backgroundImage:{
+        ruido1:'url(http://api.thumbr.it/whitenoise-361x370.png?) ',
+        ruido2:'ffffffff&noise=a3d3e6&density=100&opacity=19',
         curva1:'radial-gradient(ellipse  at 45px 30px , transparent 50%, rgba(0, 255, 0, 0) 0%, #f0f000 0%)'
       }
       ,
@@ -79,5 +87,7 @@ module.exports = {
       }
     },
   },
-  plugins: [],
+  plugins: [
+    require('tailwind-clip-path'),
+  ],
 }
