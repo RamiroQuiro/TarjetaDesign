@@ -17,6 +17,13 @@ module.exports = {
           600:'#04A9BE'
          }
       },
+      borderRadius:{
+        borderRounded:'23% 77% 0% 100% / 0% 67% 33% 100%'
+      },
+      backgroundImage:{
+        curva1:'radial-gradient(ellipse  at 45px 30px , transparent 50%, rgba(0, 255, 0, 0) 0%, #f0f000 0%)'
+      }
+      ,
       keyframes: {
         abrirCat: {
           "0%": { transform: "rotate(0.0deg)" },
