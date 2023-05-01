@@ -15,7 +15,6 @@ export default function SectionTarjetaSola({label}) {
         .from("UserData")
         .select()
         .eq("razonSocial", !label?(params.userName.toLowerCase()):label);
-        // console.log(usuario?.data[0])
         setDatosUser(usuario?.data[0]);
       };
       traerData();

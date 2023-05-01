@@ -3,7 +3,7 @@ export default function LinksSquare() {
 
   return (
     <div className="gap-5  h-full mx-auto flex items-center justify-evenly ">
-      <div className="w-16 h-16 rounded-lg bg-neutral-520 p-2 shadow-md delay-200 animate-[aparecer_2s]">
+      <div className="w-16 h-16 rounded-lg bg-neutral-520 p-2 shadow-md delay-200 animate-[aparecer_3s]">
         <svg
           className="w-full h-full fill-cyan-600 "
           width="36"
